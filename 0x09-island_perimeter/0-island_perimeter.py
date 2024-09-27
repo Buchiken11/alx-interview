@@ -9,7 +9,7 @@ def island_perimeter(grid):
     Computing the perimeter of an island without lakes.
     """
     island_perimeter = 0
-    if isinstance(grid) != list:
+    if type(grid) != list:
         return None
     n = len(grid)
     for i, row in enumerate(grid):
@@ -24,4 +24,4 @@ def island_perimeter(grid):
                 j == 0 or row[j - 1] == 0,
             )
             island_perimeter += sum(perimeter_edges)
-    return islanad_perimeter
+    return island_perimeter
